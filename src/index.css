@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('./assets/fonts/Gibson-SemiBoldItalic.eot');
+  src: local('Gibson SemiBold Italic'), local('Gibson-SemiBoldItalic'),
+      url('./assets/fonts/Gibson-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/Gibson-SemiBoldItalic.woff2') format('woff2'),
+      url('./assets/fonts/Gibson-SemiBoldItalic.woff') format('woff'),
+      url('./assets/fonts/Gibson-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('./assets/fonts/Gibson-Light.eot');
+  src: local('Gibson Light'), local('Gibson-Light'),
+      url('./assets/fonts/Gibson-Light.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/Gibson-Light.woff2') format('woff2'),
+      url('./assets/fonts/Gibson-Light.woff') format('woff'),
+      url('./assets/fonts/Gibson-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('./assets/fonts/Gibson-LightItalic.eot');
+  src: local('Gibson Light Italic'), local('Gibson-LightItalic'),
+      url('./assets/fonts/Gibson-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/Gibson-LightItalic.woff2') format('woff2'),
+      url('./assets/fonts/Gibson-LightItalic.woff') format('woff'),
+      url('./assets/fonts/Gibson-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('./assets/fonts/Gibson-Italic.eot');
+  src: local('Gibson Italic'), local('Gibson-Italic'),
+      url('./assets/fonts/Gibson-Italic.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/Gibson-Italic.woff2') format('woff2'),
+      url('./assets/fonts/Gibson-Italic.woff') format('woff'),
+      url('./assets/fonts/Gibson-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('./assets/fonts/Gibson-Bold.eot');
+  src: local('Gibson Bold'), local('Gibson-Bold'),
+      url('./assets/fonts/Gibson-Bold.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/Gibson-Bold.woff2') format('woff2'),
+      url('./assets/fonts/Gibson-Bold.woff') format('woff'),
+      url('./assets/fonts/Gibson-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('./assets/fonts/Gibson.eot');
+  src: local('Gibson'),
+      url('./assets/fonts/Gibson.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/Gibson.woff2') format('woff2'),
+      url('./assets/fonts/Gibson.woff') format('woff'),
+      url('./assets/fonts/Gibson.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('./assets/fonts/Gibson-BoldItalic.eot');
+  src: local('Gibson Bold Italic'), local('Gibson-BoldItalic'),
+      url('./assets/fonts/Gibson-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/Gibson-BoldItalic.woff2') format('woff2'),
+      url('./assets/fonts/Gibson-BoldItalic.woff') format('woff'),
+      url('./assets/fonts/Gibson-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('./assets/fonts/Gibson-SemiBold.eot');
+  src: local('Gibson SemiBold'), local('Gibson-SemiBold'),
+      url('./assets/fonts/Gibson-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/Gibson-SemiBold.woff2') format('woff2'),
+      url('./assets/fonts/Gibson-SemiBold.woff') format('woff'),
+      url('./assets/fonts/Gibson-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+html {
+  font-size: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  font-family: 'Gibson',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Gibson',
+  sans-serif;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;  
+  min-width: 50px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  /* padding: 12px 16px; */
+  right: 0px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.sidebar_MoveLeft {  
+  -webkit-animation-name: moveLeft;
+  -webkit-animation-duration: 0.4s;
+  animation-name: moveLeft;
+  animation-duration: 0.4s;    
+}
+
+.sidebar_MoveRight {  
+  -webkit-animation-name: moveRight;
+  -webkit-animation-duration: 0.3s;
+  animation-name: moveRight;
+  animation-duration: 0.3s;  
+
+}
+
+@-webkit-keyframes moveLeft {
+  from {right: -100%} 
+  to {right: 0}
+}
+
+@keyframes moveLeft {
+  from {right: -100%} 
+  to {right: 0}
+}
+
+@-webkit-keyframes moveRight {
+  from {right: 0} 
+  to {right: -100%;}
+}
+
+@keyframes moveRight {
+  from {right: 0} 
+  to {right: -100%;}
+}
